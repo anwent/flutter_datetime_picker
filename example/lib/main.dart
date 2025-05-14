@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+import 'package:flutter_datetime_picker/src/my_datetime_picker_theme.dart';
 
 void main() => runApp(new MyApp());
 
@@ -142,7 +143,7 @@ class HomePage extends StatelessWidget {
                     showTitleActions: true,
                     minTime: DateTime.now(),
                     maxTime: DateTime.now().add(Duration(days: 1000)),
-                    theme: DatePickerTheme(title: '开始时间'),
+                    theme: MyDatePickerTheme(title: '开始时间'),
                     onChanged: (date) {
                       print('change $date in time zone ' + date.timeZoneOffset.inHours.toString());
                     },
